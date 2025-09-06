@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Putra Andriansyah | Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {scroll-behavior: smooth;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: #0d0d0d;
+      overflow-x: hidden;
+    }
+
+    /* BACKGROUND CANVAS */
+    canvas#bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 15px 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+    }
+    nav h1 {font-size: 22px;}
+    nav ul {display: flex; gap: 20px; list-style: none;}
+    nav ul li a {
+      color: white; text-decoration: none;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {color: #00c3ff;}
+
+    /* HERO */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero img {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      border: 3px solid #00c3ff;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px #00c3ff;
+    }
+    .hero h2 {font-size: 32px; margin-bottom: 10px;}
+    .hero p {font-size: 18px; color: #ccc; margin-bottom: 20px;}
+
+    /* SOCIALS */
+    .socials {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .socials a {
+      font-size: 26px; color: white;
+      transition: 0.3s; text-decoration: none;
+    }
+    .socials a:hover {transform: scale(1.2);}
+    .fa-instagram:hover {color: #e1306c;}
+    .fa-tiktok:hover {color: #69c9d0;}
+    .fa-youtube:hover {color: #ff0000;}
+    .fa-x-twitter:hover {color: #1da1f2;}
+    .fa-discord:hover {color: #5865f2;}
+
+    /* ABOUT */
+    .about, .skills, .goals {
+      max-width: 800px;
+    }
+    .about p, .skills ul, .goals p {font-size: 18px; line-height: 1.7;}
+
+    .skills ul {list-style: none; margin-top: 20px;}
+    .skills li {margin: 8px 0;}
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.7);
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    /* MUSIC CONTROL */
+    #music-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      transition: 0.3s ease;
+    }
+    #music-controls:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="bg"></canvas>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>Putra Andriansyah</h1>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Goals</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <img src="WhatsApp Image 2025-07-27 at 10.45.50_5554aeca.jpg" alt="Foto Putra Andriansyah">
+    <h2>Hi, I'm Putra Andriansyah</h2>
+    <p>SMKN 1 Jakarta | Class 10</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/ptra.a_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@zephyrexz" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@fzxy3857" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/Zephyrexz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://discord.com/users/908661140144406578" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Saya adalah siswa kelas 10 di SMKN 1 Jakarta. Hobi saya bermain gitar dan mendalami teknologi, 
+      khususnya di bidang coding dan dunia digital.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>⚡ Basic HTML & CSS</li>
+      <li>⚡ Microsoft Office (Word, Excel, PowerPoint) – Advanced</li>
+      <li>⚡ Interest in coding & exploring IT</li>
+    </ul>
+  </section>
+
+  <!-- GOALS -->
+  <section id="goals" class="goals">
+    <h2>Career Goals</h2>
+    <p>
+      Saya bercita-cita berkarir di bidang IT dan Office, menggabungkan kemampuan teknis dengan 
+      keterampilan produktivitas untuk masa depan yang sukses.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Putra Andriansyah | All Rights Reserved</p>
+  </footer>
+
+  <!-- AUDIO -->
+  <audio id="bg-music" autoplay loop>
+    <source src="y2mate--Taylor-Swift-So-High-School-Official-Lyric-Video.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutar musik.
+  </audio>
+  <div id="music-controls">🔊 Pause Music</div>
+
+  <script>
+    /* BACKGROUND STARS */
+    const canvas = document.getElementById("bg");
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = Array.from({length: 150}, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5,
+      }));
+    }
+    window.addEventListener("resize", resize);
+    resize();
+
+    function animateStars() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle = "white";
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+        ctx.fill();
+        s.x += s.dx;
+        s.y += s.dy;
+        if (s.x < 0 || s.x > canvas.width) s.dx *= -1;
+        if (s.y < 0 || s.y > canvas.height) s.dy *= -1;
+      });
+      requestAnimationFrame(animateStars);
+    }
+    animateStars();
+
+    /* FADE IN SECTIONS */
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, {threshold: 0.2});
+    sections.forEach(sec => observer.observe(sec));
+
+    /* MUSIC CONTROL */
+    const music = document.getElementById("bg-music");
+    const controlBtn = document.getElementById("music-controls");
+    controlBtn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        controlBtn.innerHTML = "🔊 Pause Music";
+      } else {
+        music.pause();
+        controlBtn.innerHTML = "🔈 Play Music";
+      }
+    });
+  </script>
+</body>
+</html>
