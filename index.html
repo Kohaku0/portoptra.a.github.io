@@ -3,256 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Putra Andriansyah | Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-    /* RESET */
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    html {scroll-behavior: smooth;}
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      background: #0d0d0d;
-      overflow-x: hidden;
-    }
-
-    /* BACKGROUND CANVAS */
-    canvas#bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      padding: 15px 50px;
-      display: flex; justify-content: space-between; align-items: center;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    }
-    nav h1 {font-size: 22px;}
-    nav ul {display: flex; gap: 20px; list-style: none;}
-    nav ul li a {
-      color: white; text-decoration: none;
-      transition: 0.3s;
-    }
-    nav ul li a:hover {color: #00c3ff;}
-
-    /* HERO */
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease;
-    }
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero img {
-      width: 160px; height: 160px;
-      border-radius: 50%;
-      border: 3px solid #00c3ff;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px #00c3ff;
-    }
-    .hero h2 {font-size: 32px; margin-bottom: 10px;}
-    .hero p {font-size: 18px; color: #ccc; margin-bottom: 20px;}
-
-    /* SOCIALS */
-    .socials {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 15px;
-    }
-    .socials a {
-      font-size: 26px; color: white;
-      transition: 0.3s; text-decoration: none;
-    }
-    .socials a:hover {transform: scale(1.2);}
-    .fa-instagram:hover {color: #e1306c;}
-    .fa-tiktok:hover {color: #69c9d0;}
-    .fa-youtube:hover {color: #ff0000;}
-    .fa-x-twitter:hover {color: #1da1f2;}
-    .fa-discord:hover {color: #5865f2;}
-
-    /* ABOUT */
-    .about, .skills, .goals {
-      max-width: 800px;
-    }
-    .about p, .skills ul, .goals p {font-size: 18px; line-height: 1.7;}
-
-    .skills ul {list-style: none; margin-top: 20px;}
-    .skills li {margin: 8px 0;}
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: rgba(0,0,0,0.7);
-      font-size: 14px;
-      margin-top: 50px;
-    }
-
-    /* MUSIC CONTROL */
-    #music-controls {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 12px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      backdrop-filter: blur(5px);
-      transition: 0.3s ease;
-    }
-    #music-controls:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-  </style>
+  <title>Porto Putra.</title>
 </head>
+<link rel="stylesheet" href="style2.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
-  <!-- BACKGROUND CANVAS -->
-  <canvas id="bg"></canvas>
+  <header class="header">
+    <a href="#" class="logo">Putra.</a>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills-contact-wrapper">Skills & Contact</a>
+    </nav>
+  </header>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h1>Putra Andriansyah</h1>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#goals">Goals</a></li>
-    </ul>
-  </nav>
+  <section id="home" class="home">
+    <div class="home-content">
+      <h1>Hi, Saya Putra Andriansyah</h1>
+      <h3>Pelajar kelas 10 Jurusan SIJA</h3>
+      <p>Saya memiliki minat besar pada dunia IT dan cukup mendalami Microsoft Office, serta sedang belajar HTML & CSS. Di luar teknologi, saya juga hobi bermain gitar 🎸. Tujuan saya adalah berkarir di bidang IT dan Office, menjadi profesional yang kreatif, inovatif, dan produktif.</p>
+      <div class="btn-box">
+        <a href="https://wa.me/6285711406798">Hire Me</a>
+        <a href="#skills-contact-wrapper">My Skills</a>
+      </div>
+    </div>
+     <div class="home-sci">
+        <a href="https://www.instagram.com/ptra.a_"><i class='bx bxl-instagram'></i></a>
+        <a href="https://x.com/Zephyrexz"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.tiktok.com/@zephyrexz"><i class='bx bxl-tiktok'></i></a>
+      </div>
+      <span class="home-imghover"></span>
+  </section>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <img src="WhatsApp Image 2025-07-27 at 10.45.50_5554aeca.jpg" alt="Foto Putra Andriansyah">
-    <h2>Hi, I'm Putra Andriansyah</h2>
-    <p>SMKN 1 Jakarta | Class 10</p>
+  <section id="about" class="about">
+    <div class="about-section">
+      <div class="about-card">
+    <div class="profile-pic">
+      <img src="avatar.jpg" alt="Foto Putra Andriansyah">
+    </div>
+    <h2>About Me</h2>
 
-    <div class="socials">
-      <a href="https://www.instagram.com/ptra.a_/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@zephyrexz" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.youtube.com/@fzxy3857" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://x.com/Zephyrexz" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://discord.com/users/908661140144406578" target="_blank"><i class="fab fa-discord"></i></a>
+    <!-- Paragraf statis -->
+    <p class="about-paragraph">
+      Halo 👋, saya <strong>Putra Andriansyah</strong>, seorang pelajar kelas 10 di 
+      <strong>SMKN 1 Jakarta</strong> yang penuh semangat dalam mengeksplorasi dunia teknologi. <br><br>
+      Saya memiliki minat besar pada bidang <strong>IT</strong> dan cukup mendalami 
+      <strong>Microsoft Office</strong> sebagai alat produktivitas. Saat ini saya juga belajar dasar 
+      <strong>HTML & CSS</strong> untuk mengembangkan kemampuan di pemrograman web. <br><br>
+      Selain itu, saya juga hobi <strong>bermain gitar 🎸</strong>, karena bagi saya perpaduan antara seni 
+      dan logika membuat hidup lebih seimbang. <br><br>
+      🌟 Visi saya adalah menjadi seorang profesional di bidang <strong>IT dan Office</strong>, 
+      yang tidak hanya mahir secara teknis, tetapi juga kreatif, inovatif, dan mampu memberikan 
+      dampak positif bagi banyak orang.
+    </p>
+
+    <!-- Typing effect highlight -->
+    <div class="about-typing">
+      <span id="about-text"></span>
+    </div>
+  </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Saya adalah siswa kelas 10 di SMKN 1 Jakarta. Hobi saya bermain gitar dan mendalami teknologi, 
-      khususnya di bidang coding dan dunia digital.
-    </p>
-  </section>
+  <section id="skills-contact-wrapper" style="background:#081b29;color:#00abf0;padding:48px 0;">
+  <div class="inner" style="width:min(1100px,94%);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;">
+    <!-- SKILLS -->
+    <div id="skills" class="panel reveal">
+      <h2 class="sc-title">Keahlian</h2>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>⚡ Basic HTML & CSS</li>
-      <li>⚡ Microsoft Office (Word, Excel, PowerPoint) – Advanced</li>
-      <li>⚡ Interest in coding & exploring IT</li>
-    </ul>
-  </section>
+      <div class="skill-grid">
+        <div class="skill-card tilt">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18" /><path d="M3 6h18" /><path d="M3 18h18" /></svg>
+            <div>
+              <div class="skill-name">Microsoft Office</div>
+              <div class="skill-sub">Word / Excel / PowerPoint</div>
+            </div>
+          </div>
+          <div class="progress" data-value="92"><i></i></div>
+          <div class="skill-meta">Tingkat: <strong>Advanced</strong></div>
+        </div>
 
-  <!-- GOALS -->
-  <section id="goals" class="goals">
-    <h2>Career Goals</h2>
-    <p>
-      Saya bercita-cita berkarir di bidang IT dan Office, menggabungkan kemampuan teknis dengan 
-      keterampilan produktivitas untuk masa depan yang sukses.
-    </p>
-  </section>
+        <div class="skill-card tilt">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <div>
+              <div class="skill-name">HTML</div>
+              <div class="skill-sub">Struktur & Semantik</div>
+            </div>
+          </div>
+          <div class="progress" data-value="56"><i></i></div>
+          <div class="skill-meta">Tingkat: <strong>Menengah</strong></div>
+        </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Putra Andriansyah | All Rights Reserved</p>
-  </footer>
+        <div class="skill-card tilt">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v10H3z"/><path d="M8 7v10"/></svg>
+            <div>
+              <div class="skill-name">CSS</div>
+              <div class="skill-sub">Styling & Responsive</div>
+            </div>
+          </div>
+          <div class="progress" data-value="49"><i></i></div>
+          <div class="skill-meta">Tingkat: <strong>Dasar - Menengah</strong></div>
+        </div>
 
-  <!-- AUDIO -->
-  <audio id="bg-music" autoplay loop>
-    <source src="y2mate--Taylor-Swift-So-High-School-Official-Lyric-Video.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung pemutar musik.
-  </audio>
-  <div id="music-controls">🔊 Pause Music</div>
+        <div class="skill-card tilt">
+          <div class="skill-head">
+            <svg class="icon" viewBox="1 2 24 2" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 0v20"/><path d="M4 8h16"/></svg>
+            <div>
+              <div class="skill-name">Problem Solving</div>
+              <div class="skill-sub">Logika & Penyelesaian Tugas</div>
+            </div>
+          </div>
+          <div class="progress" data-value="76"><i></i></div>
+          <div class="skill-meta">Tingkat: <strong>Baik</strong></div>
+        </div>
+      </div>
 
-  <script>
-    /* BACKGROUND STARS */
-    const canvas = document.getElementById("bg");
-    const ctx = canvas.getContext("2d");
-    let stars = [];
+      <div class="skill-notes">
+        <span>Tip:</span> Klik kartu untuk melihat efek 3D, atau geser layar untuk memicu animasi progress.
+      </div>
+    </div>
 
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      stars = Array.from({length: 150}, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 2,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5,
-      }));
-    }
-    window.addEventListener("resize", resize);
-    resize();
+    <!-- CONTACT -->
+    <aside id="contact" class="panel reveal">
+      <div class="contact-card">
+        <h3 class="sc-title">Kontak</h3>
 
-    function animateStars() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      ctx.fillStyle = "white";
-      stars.forEach(s => {
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-        ctx.fill();
-        s.x += s.dx;
-        s.y += s.dy;
-        if (s.x < 0 || s.x > canvas.width) s.dx *= -1;
-        if (s.y < 0 || s.y > canvas.height) s.dy *= -1;
-      });
-      requestAnimationFrame(animateStars);
-    }
-    animateStars();
+        <div class="contact-info">
+          <div class="contact-row"><strong>Email:</strong> <span>putraandriansyah246@gmail.com</span></div>
+          <div class="contact-row"><strong>Lokasi:</strong> <span>Jakarta, Indonesia</span></div>
+          <div class="contact-row"><strong>Media Sosial:</strong>
+            <div class="social-inline">
+              <a href="https://www.instagram.com/ptra.a_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@zephyrexz" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.youtube.com/@fzxy3857" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://x.com/Zephyrexz" target="_blank" title="X"><i class="fab fa-twitter"></i></a>
+              <a href="https://discord.com/users/908661140144406578" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+            </div>
+          </div>
+        </div>
 
-    /* FADE IN SECTIONS */
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("show");
-      });
-    }, {threshold: 0.2});
-    sections.forEach(sec => observer.observe(sec));
+        <form id="contactFormMini" autocomplete="off">
+          <label class="f-row">
+            <input type="text" class="none" id="name" name="name" placeholder="Nama" required>
+          </label>
+          <label class="f-row">
+            <input type="email" class="none" id="email" name="email" placeholder="Email" required>
+          </label>
+          <label class="f-row">
+            <input type="text" class="message" id="message" name="message" placeholder="Tulis pesan singkat..." rows="4" required></textarea>
+          </label>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+            <button type="submit" class="send-btn">Kirim Pesan</button>
+            <button type="button" id="quickCopy" class="ghost-btn" title="Salin email">Salin Email</button>
+          </div>
+        </form>
 
-    /* MUSIC CONTROL */
-    const music = document.getElementById("bg-music");
-    const controlBtn = document.getElementById("music-controls");
-    controlBtn.addEventListener("click", () => {
-      if (music.paused) {
-        music.play();
-        controlBtn.innerHTML = "🔊 Pause Music";
-      } else {
-        music.pause();
-        controlBtn.innerHTML = "🔈 Play Music";
-      }
-    });
-  </script>
+        <div id="toast" class="toast hidden">Pesan terkirim — (demo)</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+ <audio id="bgAudio" autoplay loop muted>
+  <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script2.js"></script>
+
 </body>
 </html>
